@@ -1,0 +1,88 @@
+.main 
+{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: middle;
+  background: #FFEFD5
+}
+
+.clockbox
+{
+  display: block;
+  width: 20em;
+  height: 20em;
+  margin: auto;
+  opacity: 0.9;
+  background: white;
+  border-radius: 50%;
+  border: 0.3em dotted #FFA07A;
+}
+
+.center
+{
+  position: absolute; 
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 9.5em 9.5em auto;
+  background:#FF6347;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.hand {
+  height: 8em;
+  position: relative; 
+  transform-origin: bottom center;
+}
+
+.hand__second-hand {
+  width:0.2em;
+  top:2em;
+  left: 9.9em;
+  background:#a00;
+  z-index: 3;
+}
+.hand__minute-hand {
+  width:0.4em;
+  top: -6em;
+  left: 9.8em;
+  background:#40E0D0;
+  z-index: 2;
+}
+
+.hand__hour-hand 
+{
+  width:0.6em;
+  top: -14em;
+  left:9.7em;
+  background: #4682B4;
+  z-index: 1;
+  transform: rotate(-180deg);
+}
+
+.digit {
+  position: absolute; 
+  display: block;
+  color: black;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  z-index: 4;
+}
+.digit__twelve {
+   margin: 0 4.4em auto;
+}
+.digit__three {
+  margin: 4.4em 9.1em auto;
+}
+.digit__six {
+  margin: 9em 4.7em auto;
+}
+.digit__nine {
+  margin: 4.4em 0.1em auto;
+}
