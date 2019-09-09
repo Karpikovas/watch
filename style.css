@@ -1,11 +1,16 @@
-.main 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.main
 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  min-height: 100vh;
+  height: 100%;
   justify-content: center;
-  align-items: middle;
+  align-items: center;
   background: #FFEFD5
 }
 
@@ -23,56 +28,54 @@
 
 .center
 {
-  position: absolute; 
+  position: absolute;
   display: block;
   width: 1em;
   height: 1em;
-  margin: 9.5em 9.5em auto;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
   background:#FF6347;
   border-radius: 50%;
-  z-index: 4;
 }
 
 .hand {
-  height: 8em;
-  position: relative; 
+  position: absolute;
+  left: 50%;
+  bottom: 50%; /* bottom - чтобы не зависеть от длины стрелок и не вычитать 180 из поворота */
   transform-origin: bottom center;
 }
-
 .hand__second-hand {
   width:0.2em;
-  top:2em;
-  left: 9.9em;
+  height: 8em;
+  margin-left: -0.1em;
   background:#a00;
-  z-index: 3;
 }
 .hand__minute-hand {
   width:0.4em;
-  top: -6em;
-  left: 9.8em;
+  height: 7em;
+  margin-left: -0.2em;
   background:#40E0D0;
-  z-index: 2;
 }
-
-.hand__hour-hand 
+.hand__hour-hand
 {
   width:0.6em;
-  top: -14em;
-  left:9.7em;
+  height: 5em;
+  margin-left: -0.3em;
   background: #4682B4;
-  z-index: 1;
-  transform: rotate(-180deg);
 }
 
+
 .digit {
-  position: absolute; 
+  position: absolute;
   display: block;
   color: black;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  z-index: 4;
+
 }
 .digit__twelve {
    margin: 0 4.4em auto;
